@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "ES2022",
+    "target": "ES2022",
+    "noEmit": false,
+    "composite": true
+  },
+  "include": ["src"],
+  "exclude": ["src/app"]
+}
