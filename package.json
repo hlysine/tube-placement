@@ -7,7 +7,7 @@
     "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
     "client:dev": "vite",
     "server:dev": "nodemon",
-    "server:build": "tsc --project tsconfig.server.json",
+    "server:build": "tsc --project tsconfig.server.json && tsc-alias -p tsconfig.server.json",
     "client:build": "vite build",
     "build": "npm run server:build && npm run client:build",
     "serve": "vite preview",
@@ -43,6 +43,7 @@
     "postcss": "^8.4.27",
     "prettier": "3.0.1",
     "tailwindcss": "^3.3.3",
+    "tsc-alias": "^1.8.10",
     "tsx": "^4.19.1",
     "typescript": "^5.1.6",
     "vite": "^4.4.9"
