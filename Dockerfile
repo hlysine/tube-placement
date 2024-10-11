@@ -47,7 +47,8 @@ RUN --mount=type=secret,id=KAGGLE_USERNAME,mode=0444,required=true \
     kaggle competitions download -c ranzcr-clip-catheter-line-classification -p $HOME/app/dist/app/tube-placement
 
 RUN cd $HOME/app/dist/app/tube-placement && \
-    unzip ranzcr-clip-catheter-line-classification.zip \
+    unzip ranzcr-clip-catheter-line-classification.zip && \
+    rm ranzcr-clip-catheter-line-classification.zip && \
     cd $HOME/app
 
 EXPOSE 7860
