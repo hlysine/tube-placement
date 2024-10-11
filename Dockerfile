@@ -44,7 +44,7 @@ RUN --mount=type=secret,id=KAGGLE_USERNAME,mode=0444,required=true \
     --mount=type=secret,id=KAGGLE_KEY,mode=0444,required=true \
     export KAGGLE_USERNAME=$(cat /run/secrets/KAGGLE_USERNAME) && \
     export KAGGLE_KEY=$(cat /run/secrets/KAGGLE_KEY) && \
-    kaggle competitions download -c ranzcr-clip-catheter-line-classification --unzip -p $HOME/app/dist/app/tube-placement
+    kaggle competitions download -c ranzcr-clip-catheter-line-classification -p $HOME/app/dist/app/tube-placement
 
 RUN cd $HOME/app/dist/app/tube-placement && \
     unzip ranzcr-clip-catheter-line-classification.zip \
